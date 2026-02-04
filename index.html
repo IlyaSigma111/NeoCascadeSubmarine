@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoCascade Submarine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="mobile-view" id="mobileView">
+            <header class="game-header">
+                <div class="submarine-info glass">
+                    <h1><i class="fas fa-subway"></i> NEO-CASCADE</h1>
+                    <div class="depth-display">Глубина: <span id="currentDepth">0</span>м</div>
+                </div>
+                <div class="role-selector glass">
+                    <button class="role-btn" data-role="captain"><i class="fas fa-crown"></i> Капитан</button>
+                    <button class="role-btn" data-role="engineer"><i class="fas fa-cogs"></i> Инженер</button>
+                    <button class="role-btn" data-role="navigator"><i class="fas fa-compass"></i> Штурман</button>
+                    <button class="role-btn" data-role="sonar"><i class="fas fa-satellite-dish"></i> Сонар</button>
+                </div>
+            </header>
+
+            <main class="game-panels">
+                <div id="captainPanel" class="panel hidden"></div>
+                <div id="engineerPanel" class="panel hidden"></div>
+                <div id="navigatorPanel" class="panel hidden"></div>
+                <div id="sonarPanel" class="panel hidden"></div>
+            </main>
+
+            <footer class="game-footer glass">
+                <div class="connection-status">
+                    <span id="connectionStatus" class="connected"><i class="fas fa-wifi"></i> Подключено</span>
+                    <span class="players-online"><i class="fas fa-users"></i> <span id="playersCount">1</span></span>
+                </div>
+                <button id="modeToggle" class="mode-btn"><i class="fas fa-desktop"></i> Режим доски</button>
+            </footer>
+        </div>
+
+        <div class="dashboard-view hidden" id="dashboardView">
+            <div class="dashboard-container glass">
+                <h2><i class="fas fa-tv"></i> Командная доска</h2>
+                <div id="dashboardContent"></div>
+                <button id="backToGame" class="back-btn"><i class="fas fa-arrow-left"></i> Вернуться в игру</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
